@@ -1,0 +1,142 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	font-size: 100%;
+}
+
+body {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #121212;
+	text-transform: uppercase;
+	font-family: 'Poppins', sans-serif;
+}
+
+.action {
+	position: relative;
+	width: 1px;
+	height: 1px;
+	background: red;
+	border-radius: 50%;
+	animation: open 3s ease-in-out infinite;
+}
+
+.clapperboard {
+	margin-top: 150px;
+}
+
+.clapperboard .top {
+	position: absolute;
+	bottom: 0;
+}
+
+.clapperboard .top,
+.clapperboard .bottom {
+	width: 30rem;
+	height: 3rem;
+	background: #000;
+	padding: 0 1.5rem;
+	display: flex;
+	justify-content: space-around;
+	overflow: hidden;
+}
+
+.clapperboard .top .stripes,
+.clapperboard .bottom .stripes {
+	display: inline-block;
+	width: 15rem;
+	height: 3rem;
+	background: #fff;
+	transform: rotate(50deg);
+}
+
+.clapperboard .bottom .stripes {
+	transform: rotate(-50deg);
+}
+
+
+.clapperboard-body {
+	width: 30rem;
+	height: 20rem;
+	padding: 1rem 1.5rem;
+	color: #fff;
+	background: #000;
+}
+
+.clapperboard-body .container .hollywood {
+	font-size: 2rem;
+	font-weight: 300;
+}
+
+.clapperboard .container2 {
+	display: flex;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+}
+
+.container2 .box {
+	width: 33.3%;
+	height: 5rem;
+	text-align: center;
+}
+
+.container2 .box.middle-box {
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
+}
+
+.container3 {
+	display: flex;
+	border-bottom: 1px solid #fff;
+}
+
+.container3 .wrapper {
+	width: 62%;
+}
+
+.container3 .date,
+.container4 .director {
+	border-bottom: 1px solid #fff;
+}
+
+.container3 .sound {
+	text-align: center;
+	padding-left: 5px;
+	border-left: 1px solid #fff;
+}
+
+.container4 {
+	border-bottom: 1px solid #fff;
+}
+
+.date,
+.prod-co,
+.sound,
+.director,
+.cameraman {
+	padding: 0.3rem 0;
+}
+
+@keyframes open {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(-20deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+@media(max-width: 600px) {
+	:root {
+		font-size: 65.2%;
+	}
+}
